@@ -74,7 +74,7 @@
       <p class="loc"><svg class="i"><use href="#i-pin"/></svg>Philadelphia, PA</p>
       <div class="contact">
         <a href="mailto:xuweid@engineering.upenn.edu"><svg class="i"><use href="#i-mail"/></svg>Email</a>
-        <a href="https://github.com/XuweiDing04" target="_blank" rel="noopener"><svg class="i"><use href="#i-github"/></svg>GitHub</a>
+        <a href="https://github.com/os-cua-framework" target="_blank" rel="noopener"><svg class="i"><use href="#i-github"/></svg>GitHub</a>
         <a href="https://www.linkedin.com/in/xuwei-ding-506998329/" target="_blank" rel="noopener"><svg class="i"><use href="#i-linkedin"/></svg>LinkedIn</a>
       </div>
     </aside>
@@ -85,12 +85,17 @@
         <h2 class="lead" data-reveal>How can we deploy AI in everyday life, <em>safely and efficiently</em>?</h2>
         <div class="prose" data-reveal style="--d:.08s">
           <p>I'm a first-year M.S. student in Data Science at the <strong>University of Pennsylvania</strong>, after finishing my B.A. in Data Science at the <strong>University of Wisconsin–Madison</strong>. Since January 2025 I have been doing research at the <strong>LIME Lab</strong> at USC with <a href="https://jyzhao.net/" target="_blank" rel="noopener">Jieyu Zhao</a>, and since August 2026 I have also been part of the <strong>KANG Lab</strong> at MBZUAI with <a href="https://jiank2.github.io/" target="_blank" rel="noopener">Jian Kang</a>. Also, I am fortunate to work closely with <a href="https://linxins.net/" target="_blank" rel="noopener">Linxin Song</a>.</p>
-          <p>My research addresses this question from three angles: evaluating LLMs and VLMs, building and stress-testing computer-use agents, and taking a data-centric view of AI. Lately I have also become curious about taking agents beyond the screen to operate robots.</p>
         </div>
+        <p class="qs-label" data-reveal>Questions behind my research</p>
+        <ol class="questions" data-reveal>
+          <li><span class="q">Q1</span><p>How can we measure what models and agents can really do, and explain why they fail?</p></li>
+          <li><span class="q">Q2</span><p>When an agent acts on our behalf, how can it understand what we mean, and what its actions will cause?</p></li>
+          <li><span class="q">Q3</span><p>How can we produce data at scale that stays verifiable, and turn it into better agents?</p></li>
+        </ol>
         <div class="interests">
           <div class="interest" data-reveal style="--d:.10s"><span class="tag">LLM / VLM Evaluation</span><p>Benchmarks, failure taxonomies and verifiable judges that reveal where and why models break before they reach users.</p></div>
           <div class="interest" data-reveal style="--d:.16s"><span class="tag">Computer-Use Agents</span><p>Agents that operate real software on our behalf: how they fail, how to keep them safe, and how to make them reliable.</p></div>
-          <div class="interest" data-reveal style="--d:.22s"><span class="tag">Data-Centric AI</span><p>Better data as the lever: human-crafted benchmarks, verified task synthesis, and systematic error discovery over massive knowledge bases.</p></div>
+          <div class="interest" data-reveal style="--d:.22s"><span class="tag">Data-Centric AI</span><p>Better data as the lever: human-crafted benchmarks, verified task synthesis, and error discovery over massive knowledge bases.</p></div>
           <div class="interest new" data-reveal style="--d:.28s"><span class="tag">Robot Use · Exploring</span><p>Extending agents from GUIs to the physical world: using them to control robots, and what safety and evaluation mean there.</p></div>
         </div>
       </section>
@@ -100,12 +105,12 @@
         <div class="sec-head" data-reveal><span class="idx">01</span><h2>Education</h2></div>
         <div class="edu-grid">
           <article class="edu" data-reveal>
-            <span class="date">Aug 2026 – May 2028</span>
+            <span class="date">Expected May 2028</span>
             <h3>University of Pennsylvania</h3>
             <p>M.S. in Data Science</p>
           </article>
           <article class="edu" data-reveal style="--d:.08s">
-            <span class="date">Sep 2022 – May 2026</span>
+            <span class="date">Graduated May 2026</span>
             <h3>University of Wisconsin–Madison</h3>
             <p>B.A. in Data Science</p>
             <div class="chips"><span class="chip">GPA <b>4.0</b> / 4.0</span><span class="chip">Dean's List</span></div>
@@ -120,19 +125,20 @@
           <article class="tl-item current" data-reveal>
             <div class="tl-head"><h3>KANG Lab, <abbr title="Mohamed bin Zayed University of Artificial Intelligence">MBZUAI</abbr></h3><span class="date">Aug 2026 – Present</span></div>
             <p class="tl-sub">Research Assistant<span class="sep">·</span>Advisor: <a href="https://jiank2.github.io/" target="_blank" rel="noopener">Jian Kang</a></p>
+            <ul class="bullets"><li>Research focus: <b>evaluation of computer-use agents</b>.</li></ul>
           </article>
 
           <article class="tl-item" data-reveal>
             <div class="tl-head"><h3>Beijing Lanyue Intelligence</h3><span class="date">May 2026 – Aug 2026</span></div>
             <p class="tl-sub">LLM &amp; Agent Algorithm Intern</p>
             <ul class="bullets">
-              <li><b>Failure attribution.</b> Benchmarked 12 frontier LLMs on web automation and built a 3-class, 9-subclass failure taxonomy from execution trajectories; log-based rules fully identified (171/171) environment-induced failures.</li>
-              <li><b>Task synthesis.</b> Built a decomposition-and-recomposition pipeline: a computer-use agent turns each site into a capability card, verified cross-page transitions become edges of an information-flow DAG, and paths over the graph compose long-horizon, cross-site tasks.</li>
-              <li><b>Verifiable LLM-as-a-Judge.</b> Rubrics anchored to verbatim spans of the instruction and scored only against screenshots, action trajectories and visible page fields.</li>
+              <li><b>Browser-use evaluation.</b> Benchmarked 12 frontier LLMs on web automation in the browser-use framework and built a 3-class, 9-subclass failure taxonomy (reasoning, execution, environment).</li>
+              <li><b>Active-exploration task synthesis.</b> LLM-written web tasks often invent controls and fields. Instead, a computer-use agent explores each site and records a capability card; only cross-page transitions it actually executed become edges of an information-flow DAG, and paths over the graph compose long-horizon, cross-site tasks. 331 sites explored, 75 tasks delivered.</li>
+              <li><b>Verifiable LLM-as-a-Judge.</b> 384 rubrics, each anchored to a verbatim span of the task and scored only against screenshots, the action trajectory and visible page fields, so every failure points to a specific step. On GPT 5.6 Sol, 77.1% of rubrics pass.</li>
             </ul>
             <div class="chips">
-              <span class="chip"><b>331</b> sites explored</span>
-              <span class="chip"><b>75</b> tasks · <b>384</b> rubrics</span>
+              <span class="chip"><b>30.8</b> steps / task on average</span>
+              <span class="chip"><b>57.3%</b> task success · GPT 5.6 Sol</span>
               <span class="chip"><b>97.0%</b> judge–human agreement</span>
             </div>
           </article>
@@ -158,11 +164,11 @@
             <div>
               <h3 class="pub-title"><a href="https://arxiv.org/abs/2604.10577" target="_blank" rel="noopener">The Blind Spot of Agent Safety: How Benign User Instructions Expose Critical Vulnerabilities in Computer-Use Agents</a></h3>
               <p class="authors"><span class="me">Xuwei Ding</span><sup>*</sup>, <a href="https://skylarrrzhai.com/" target="_blank" rel="noopener">Skylar Zhai</a><sup>*</sup>, <a href="https://linxins.net/" target="_blank" rel="noopener">Linxin Song</a><sup>*</sup>, Jiate Li, <a href="https://maksimstw.github.io/" target="_blank" rel="noopener">Taiwei Shi</a>, Nicholas Meade, Siva Reddy, <a href="https://jiank2.github.io/" target="_blank" rel="noopener">Jian Kang</a>, <a href="https://jyzhao.net/" target="_blank" rel="noopener">Jieyu Zhao</a></p>
-              <p class="tldr">We introduce <b>OS-Blind</b>, a benchmark where every user instruction is benign and the harm comes from the environment or the execution outcome. Most computer-use agents exceed 90% attack success rate, and safety alignment mostly fires in the first few steps and rarely re-engages.</p>
+              <p class="tldr">We introduce <b>OS-Blind</b>, a benchmark where every user instruction is benign and the harm comes from the environment or the execution outcome. Most computer-use agents exceed 90% attack success rate, and safety alignment mostly fires in the first few steps and rarely re-engages. Multi-agent systems are even more vulnerable: task decomposition strips the context and hides the user's intent from the agents that act.</p>
               <div class="chips">
                 <span class="chip"><b>300</b> tasks · 8 apps</span>
                 <span class="chip">Claude 4.5 Sonnet: <b>73.0%</b> ASR</span>
-                <span class="chip">Multi-agent: <b>92.7%</b></span>
+                <span class="chip">Multi-agent system: <b>92.7%</b> ASR</span>
               </div>
               <div class="links">
                 <a class="btn" href="https://arxiv.org/abs/2604.10577" target="_blank" rel="noopener"><svg class="i"><use href="#i-doc"/></svg>Paper</a>

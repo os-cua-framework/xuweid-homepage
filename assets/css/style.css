@@ -58,8 +58,8 @@ body {
 a { color: inherit; text-decoration: none; }
 abbr[title] { text-decoration: none; cursor: help; }
 img { max-width: 100%; display: block; }
-h1, h2, h3, p, ul { margin: 0; }
-ul { padding: 0; list-style: none; }
+h1, h2, h3, p, ul, ol { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 ::selection { background: var(--accent-soft); color: var(--ink); }
 
@@ -144,7 +144,15 @@ section { scroll-margin-top: calc(var(--nav-h) + 20px); margin-bottom: 72px; }
 .prose a { color: var(--ink); font-weight: 500; background: linear-gradient(var(--accent), var(--accent)) 0 100%/100% 1.5px no-repeat; padding-bottom: 1px; transition: color .2s, background-size .25s; }
 .prose a:hover { color: var(--accent-ink); }
 
-.interests { margin-top: 32px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.qs-label { margin-top: 34px; font: 500 12px var(--font-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); }
+.questions { margin-top: 12px; }
+.questions li { display: grid; grid-template-columns: 46px minmax(0, 1fr); align-items: baseline; padding: 15px 0; border-top: 1px solid var(--line); }
+.questions li:last-child { border-bottom: 1px solid var(--line); }
+.questions .q { font: 600 13px var(--font-mono); color: var(--accent-ink); }
+.questions p { font: 500 clamp(18px, 2vw, 21px)/1.4 var(--font-display); letter-spacing: -.012em; max-width: 30em; }
+.questions em { font-style: normal; background: linear-gradient(transparent 62%, var(--accent-soft) 62%); box-shadow: 0 2px 0 var(--accent); }
+.interest .tag b { margin-right: 8px; padding: 1px 7px; border-radius: 6px; background: var(--accent-soft); font-weight: 600; }
+.interests { margin-top: 26px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .interest { padding: 18px 18px 20px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); transition: border-color .25s, transform .25s, box-shadow .25s; }
 .interest.new { border-style: dashed; background: transparent; }
 .interest:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); }
